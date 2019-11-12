@@ -21,6 +21,16 @@
                 <views:BluetoothPage />
             </x:Arguments>
         </NavigationPage>
+         <NavigationPage Title="Commands">
+            <NavigationPage.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS" Value="tab_bluetooth.png"/>
+                </OnPlatform>
+            </NavigationPage.Icon>
+            <x:Arguments>
+                <views:CommandsPage />
+            </x:Arguments>
+        </NavigationPage>
         <NavigationPage Title="About">
             <NavigationPage.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
