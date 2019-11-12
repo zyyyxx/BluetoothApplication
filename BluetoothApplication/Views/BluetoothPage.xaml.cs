@@ -11,5 +11,10 @@ namespace BluetoothApplication.Views
         {
             InitializeComponent();
         }
+
+        public async void ConnectToBluetoothDevice(object sender, EventArgs args)
+        {
+            await Label.RelRotateTo(360, 1000);
+        }
     }
 }

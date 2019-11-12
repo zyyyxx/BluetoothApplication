@@ -10,6 +10,17 @@
             <Color x:Key="LightTextColor">#999999</Color>
         </ResourceDictionary>
     </ContentPage.Resources>
-    <ContentPage.Content>
-    </ContentPage.Content>
+<StackLayout>
+    <Label x:Name="Label"
+           Text="Bluetooth Temperature:"
+           VerticalOptions="Start"/>
+
+
+<Button Text="Connect to Bluetooth"
+        HorizontalOptions="CenterAndExpand"
+        VerticalOptions="CenterAndExpand"
+        Clicked="ConnectToBluetoothDevice"
+        IsEnabled="True"/>
+        
+</StackLayout>
 </ContentPage>
