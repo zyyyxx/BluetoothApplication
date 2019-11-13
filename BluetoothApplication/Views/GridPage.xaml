@@ -4,30 +4,34 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="BluetoothApplication.Views.BluetoothPage"
+             x:Class="BluetoothApplication.Views.GridPage"
              xmlns:vm="clr-namespace:BluetoothApplication.ViewModels"
              Title="{Binding Title}">
-     <ContentPage.BindingContext>
-        <vm:BluetoothViewModel />
+    <ContentPage.BindingContext>
+        <vm:GridViewModel />
     </ContentPage.BindingContext>
- <ContentPage.Resources>
+     <ContentPage.Resources>
         <ResourceDictionary>
             <Color x:Key="Primary">#2196F3</Color>
             <Color x:Key="Accent">#96d1ff</Color>
             <Color x:Key="LightTextColor">#999999</Color>
         </ResourceDictionary>
     </ContentPage.Resources>
-<StackLayout>
-    <Label x:Name="Label"
-           Text="Bluetooth Temperature:"
-           VerticalOptions="Start"/>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
 
+        <Label Text="(0,0)" Grid.Row="0" Grid.Column="0"/>
+        <Label Text="(0,1)" Grid.Row="0" Grid.Column="1" />
+        <Label Text="(1,1)" Grid.Row="1" Grid.Column="1" />
+        <Label Text="(2,0)" Grid.Row="2" Grid.Column="0" />
 
-<Button Text="Connect to Bluetooth"
-        HorizontalOptions="CenterAndExpand"
-        VerticalOptions="CenterAndExpand"
-        Clicked="ConnectToBluetoothDevice"
-        IsEnabled="True"/>
-        
-</StackLayout>
+    </Grid>
 </ContentPage>
