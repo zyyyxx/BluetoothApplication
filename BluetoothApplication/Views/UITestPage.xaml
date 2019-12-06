@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BluetoothApplication.Views.UITestPage"
+             xmlns:vm="clr-namespace:BluetoothApplication.ViewModels"
+             Title="{Binding Title}">
+    <ContentPage.BindingContext>
+        <vm:UITestViewModel />
+    </ContentPage.BindingContext>
+     <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+<Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+
+    <Label AutomationId="Label1" Text="This is the label 1" Grid.Row="0" Grid.Column="0"/>
+    <Grid>
+        <Button AutomationId="Button1" Text="Button 1" Clicked="OnClicked" Grid.Row="1" Grid.Column="0"/>
+        <Entry Placeholder="This is text 1" Text="{Binding Text1}" Grid.Row="1" Grid.Column="1"/>
+    </Grid>
+    <Label AutomationId="Label2" Text="This is the label 2" Grid.Row="0" Grid.Column="1"/>
+
+
+    <Label AutomationId="Label3" Text="This is the label 3" Grid.Row="1" Grid.Column="0"/>
+
+
+    <Label AutomationId="Label4" Text="This is the label 4" Grid.Row="1" Grid.Column="1"/>
+
+</Grid>
+</ContentPage>

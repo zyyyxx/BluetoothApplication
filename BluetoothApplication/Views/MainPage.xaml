@@ -41,6 +41,16 @@
                 <views:GridPage />
             </x:Arguments>
         </NavigationPage>
+        <NavigationPage Title="UITest">
+            <NavigationPage.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS" Value="tab_bluetooth.png" />
+                </OnPlatform>
+            </NavigationPage.Icon>
+            <x:Arguments>
+                <views:UITestPage />
+            </x:Arguments>
+        </NavigationPage>
         <NavigationPage Title="About">
             <NavigationPage.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
