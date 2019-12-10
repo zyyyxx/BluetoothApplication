@@ -19,26 +19,46 @@
     </ContentPage.Resources>
 <Grid>
     <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
         <RowDefinition Height="*"/>
         <RowDefinition Height="*"/>
     </Grid.RowDefinitions>
     <Grid.ColumnDefinitions>
         <ColumnDefinition Width="*"/>
         <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
     </Grid.ColumnDefinitions>
 
-    <Label AutomationId="Label1" Text="This is the label 1" Grid.Row="0" Grid.Column="0"/>
-    <Grid>
-        <Button AutomationId="Button1" Text="Button 1" Clicked="OnClicked" Grid.Row="1" Grid.Column="0"/>
-        <Entry Placeholder="This is text 1" Text="{Binding Text1}" Grid.Row="1" Grid.Column="1"/>
-    </Grid>
-    <Label AutomationId="Label2" Text="This is the label 2" Grid.Row="0" Grid.Column="1"/>
+    <Label AutomationId="Label1" Text="Temperature 1" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+    <Label AutomationId="Label2" Text="Temperature 2" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2"/>
+    <Label AutomationId="Label3" Text="Temperature 3" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2"/>
+    <Label AutomationId="Label4" Text="Temperature 4" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2"/>
 
+    <Entry x:Name="temp1" Placeholder="Temp" Text="{Binding Temp}" Grid.Row="2" Grid.Column="0"/>
+    <Entry Placeholder="Temp" Grid.Row="8" Grid.Column="0"/>
+    <Entry Placeholder="Temp" Grid.Row="2" Grid.Column="2"/>
+    <Entry Placeholder="Temp" Grid.Row="8" Grid.Column="2"/>
 
-    <Label AutomationId="Label3" Text="This is the label 3" Grid.Row="1" Grid.Column="0"/>
+    <Button AutomationId="Button1" Text="Button 1" Command="{Binding UpdateResultCommand}" Grid.Row="4" Grid.Column="0"/>
+    <Button AutomationId="Button2" Text="Button 2" Grid.Row="10" Grid.Column="0"/>
+    <Button AutomationId="Button3" Text="Button 3" Grid.Row="4" Grid.Column="2"/>
+    <Button AutomationId="Button4" Text="Button 4" Grid.Row="10" Grid.Column="2"/>
 
-
-    <Label AutomationId="Label4" Text="This is the label 4" Grid.Row="1" Grid.Column="1"/>
+    <Entry IsReadOnly="True" AutomationId="Result1" Text="{Binding Result}" Grid.Row="2" Grid.RowSpan="3" Grid.Column="1" />
+    <Label AutomationId="Label6" Text="{Binding Text1}" Grid.Row="8" Grid.RowSpan="3" Grid.Column="1" />
+    <Label AutomationId="Label7" Text="{Binding Text1}" Grid.Row="2" Grid.RowSpan="3" Grid.Column="3" />
+    <Label AutomationId="Label8" Text="{Binding Text1}" Grid.Row="8" Grid.RowSpan="3" Grid.Column="3" />
 
 </Grid>
+
 </ContentPage>

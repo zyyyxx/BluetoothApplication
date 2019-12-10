@@ -4,7 +4,7 @@ using Xamarin.UITest;
 
 namespace BluetoothApplication.UITests.Tests
 {
-    [TestFixture(Platform.Android)]
+    //[TestFixture(Platform.Android)]
     [TestFixture(Platform.iOS)]
     public class BluetoothPageUITest
     {

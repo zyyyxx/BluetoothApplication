@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using BluetoothApplication.UITests;
+using NUnit.Framework;
 using Xamarin.UITest;
 
 namespace BluetoothApplication.UITests
@@ -12,6 +13,7 @@ namespace BluetoothApplication.UITests
 
         protected ItemsPage ItemsPage;
         protected NewItemPage NewItemPage;
+        protected UITestPage UITestPage;
 
         protected BaseTest(Platform platform)
         {
@@ -26,6 +28,7 @@ namespace BluetoothApplication.UITests
 
             ItemsPage = new ItemsPage(app, platform);
             NewItemPage = new NewItemPage(app, platform);
+            //UITestPage = new UITestPage(app, platform);
         }
     }
 }

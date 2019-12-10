@@ -22,9 +22,9 @@ namespace BluetoothApplication.UITests
         }
         public bool IsPageVisible => app.Query(pageTitle).Length > 0;
 
-        public void WaitForPageToLoad()
-        {
-            app.WaitForElement(pageTitle);
-        }
+        //public void WaitForPageToLoad()
+        //{
+        //    app.WaitForElement(pageTitle);
+        //}
     }
 }

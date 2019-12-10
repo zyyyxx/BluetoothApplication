@@ -13,7 +13,7 @@ namespace BluetoothApplication.UITests
         {
             base.BeforeEachTest();
 
-            ItemsPage.WaitForPageToLoad();
+            //ItemsPage.WaitForPageToLoad();
         }
 
         [Test]
@@ -34,7 +34,7 @@ namespace BluetoothApplication.UITests
             Assert.IsTrue(app.Query(itemName).Length > 0);
         }
 
-        [Ignore("")]
+        //[Ignore("")]
         [Test]
         public void Repl()
         {

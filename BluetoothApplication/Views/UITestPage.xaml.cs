@@ -10,10 +10,5 @@ namespace BluetoothApplication.Views
         {
             InitializeComponent();
         }
-
-        async void OnClicked(object sender, EventArgs args)
-        {
-            
-        }
     }
 }

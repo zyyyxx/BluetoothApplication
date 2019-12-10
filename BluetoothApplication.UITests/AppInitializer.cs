@@ -18,7 +18,9 @@ namespace BluetoothApplication.UITests
 
             return ConfigureApp
                 .iOS
-                .InstalledApp("../../BluetoothApplication.iOS/bin/iPhoneSimulator/Debug/device-builds/iphone12.3-13.2/BluetoothApplication.iOS.app")
+                .AppBundle("../../../BluetoothApplication.iOS/bin/iPhoneSimulator/Debug/device-builds/iphone12.3-13.2/BluetoothApplication.iOS.app")
+                .Debug()
+                .EnableLocalScreenshots()
                 .StartApp();
         }
     }
